@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="container" id="login-screen">
+        <h2>Welcome Back</h2>
+        <p>Don't have an account? <a href="#" id="sign-up-link">Sign Up</a></p>
+        <input type="email" placeholder="Enter Email Address" id="login-email">
+        <input type="password" placeholder="Password" id="login-password">
+        <div class="options">
+            <label><input type="checkbox" id="remember-me"> Remember me</label>
+            <a href="#" id="forget-password-link">Forget password?</a>
+        </div>
+        <button id="login-button">Login</button>
+    </div>
+
+    <!-- Sign Up Screen -->
+    <div class="container" id="signup-screen" style="display: none;">
+        <h2>Welcome</h2>
+        <p>Create your account or <a href="#" id="login-link">Login</a></p>
+        <input type="text" placeholder="Username" id="signup-username">
+        <input type="email" placeholder="Email" id="signup-email">
+        <input type="password" placeholder="Password" id="signup-password">
+        <input type="password" placeholder="Confirm Password" id="signup-confirm-password">
+        <label><input type="checkbox" id="terms"> I agree to the terms and conditions</label>
+        <button id="register-button">Register</button>
+    </div>
+
+    <!-- OTP Verification Screen -->
+    <div class="container" id="otp-screen" style="display: none;">
+        <h2>OTP Verification</h2>
+        <p>We sent a verification code to your email. The code will expire in <span id="otp-timer">03:15</span></p>
+        <div id="otp-inputs">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+    </div>
+
+    <!-- Forget Password Screen -->
+    <div class="container" id="forget-password-screen" style="display: none;">
+        <h2>Forget Password</h2>
+        <p>You can change your password for security reasons or reset it if you forgot it.</p>
+        <input type="email" placeholder="Email" id="forget-password-email">
+        <button id="forget-password-button">Continue</button>
+    </div>
+
+    <!-- Reset Password Screen -->
+    <div class="container" id="reset-password-screen" style="display: none;">
+        <h2>Reset Password</h2>
+        <p>You can change your password for security reasons.</p>
+        <input type="password" placeholder="New Password" id="reset-password">
+        <input type="password" placeholder="Confirm Password" id="reset-confirm-password">
+        <button id="reset-button">Reset Password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
